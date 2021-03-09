@@ -18,6 +18,7 @@ using namespace Windows::UI::Xaml::Data;
 using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+using namespace Windows::Devices::PointOfService;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,3 +26,13 @@ MainPage::MainPage()
 {
 	InitializeComponent();
 }
+
+void EscPosPrinterUWP::MainPage::button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{	
+	//textType->Text = ClaimedCashDrawer().GetType()->ToString();
+
+	ReceiptPrintJob^ job;
+	job->PrintLine("Hello, World!");
+}
+
+

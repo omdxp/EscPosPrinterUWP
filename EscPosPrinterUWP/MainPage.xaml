@@ -9,14 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="Aqua">
-        <TextBlock Text="Hello"
+        <TextBlock
+            x:Name="textType"
+            Text="Hello"
+                   Foreground="Black"
                    FontSize="100"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
-        <Button x:Name="button" Content="Click" RenderTransformOrigin="14.68,6.485" Margin="0,432,0,0" VerticalAlignment="Top" Height="129" Width="422" HorizontalAlignment="Center"
+                   VerticalAlignment="Top" Margin="0,40,0,0" />
+        <Button x:Name="button" Content="Click" RenderTransformOrigin="14.68,6.485" Margin="0,275,0,0" VerticalAlignment="Top" Height="129" Width="422" HorizontalAlignment="Center"
                 FontSize="50"
                 Background="Brown"
-                BorderBrush="Azure"
+                BorderBrush="Azure" Click="button_Click"
                 />
     </Grid>
 </Page>
