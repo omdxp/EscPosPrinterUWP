@@ -6,7 +6,6 @@
 #pragma once
 
 #include "MainPage.g.h"
-using namespace Windows::Devices::PointOfService;
 
 namespace EscPosPrinterUWP
 {
@@ -19,9 +18,7 @@ namespace EscPosPrinterUWP
 		MainPage();
 
 	private:
-		Platform::String^ posPrinterSelector;
-		Platform::String^ cashDrawerSelector;
-		void button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		
+		void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_1(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

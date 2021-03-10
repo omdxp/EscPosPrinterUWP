@@ -7,28 +7,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid Background="Aqua">
-        <TextBlock
-            x:Name="PosPrinterText"
-            Text="Printer"
-            MaxLines="5"
-                   Foreground="Black"
-                   FontSize="20"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top" Margin="92,93,0,0" RenderTransformOrigin="0.295,5.128" Height="179" Width="1107" />
-        <TextBlock
-            x:Name="CashDrawerText"
-            Text="Cash"
-            MaxLines="5"
-                   Foreground="Black"
-                   FontSize="20"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top" Margin="92,300,0,0" RenderTransformOrigin="0.511,-3.608" Height="124" Width="1109" />
-        <Button x:Name="button" Content="Click" RenderTransformOrigin="14.68,6.485" Margin="0,480,0,0" VerticalAlignment="Top" Height="129" Width="422" HorizontalAlignment="Center"
-                FontSize="50"
-                Background="Brown"
-                BorderBrush="Azure" Click="button_Click"
-                />
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="wideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="641" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="narrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="contentPanel.Margin" Value="20,30,0,0" />
+                        <Setter Target="inputPanel.Orientation" Value="Vertical" />
+                        <Setter Target="inputButton.Margin" Value="0,4,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
+            <TextBlock x:Name="printerSelectorText" Text="Printer" FontSize="18" Style="{ThemeResource BaseTextBlockStyle}" />
+            <TextBlock HorizontalAlignment="Left" Text="Hello World" FontSize="36" />
+            <TextBlock Text="What's your name?" FontSize="18" Style="{ThemeResource BaseTextBlockStyle}" />
+            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
+                <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left" />
+                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click" />
+            </StackPanel>
+            <TextBlock x:Name="greetingOutput" FontSize="18" Style="{ThemeResource BaseTextBlockStyle}" />
+        </StackPanel>
+        <Button Click="Button_Click_1" Content="Scan for device" FontSize="40" Margin="0,325,0,0" VerticalAlignment="Top" Height="101" Width="321" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

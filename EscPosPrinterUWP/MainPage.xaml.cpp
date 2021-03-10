@@ -24,18 +24,17 @@ using namespace Windows::UI::Xaml::Navigation;
 MainPage::MainPage()
 {
 	InitializeComponent();
-	PosPrinterText->Text = this->posPrinterSelector;
-	CashDrawerText->Text = this->cashDrawerSelector;
-	this->posPrinterSelector = PosPrinter::GetDeviceSelector(PosConnectionTypes::Local);
-	this->cashDrawerSelector = CashDrawer::GetDeviceSelector(PosConnectionTypes::Local);
-
-}
-
-void EscPosPrinterUWP::MainPage::button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-{	
-	PosPrinterText->Text = this->posPrinterSelector;
-	CashDrawerText->Text = this->cashDrawerSelector;
-
 }
 
 
+
+void EscPosPrinterUWP::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	greetingOutput->Text = "Hello, " + nameInput->Text + "!";
+}
+
+
+void EscPosPrinterUWP::MainPage::Button_Click_1(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	printerSelectorText->Text = "Scanned";
+}
