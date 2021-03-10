@@ -10,13 +10,22 @@
 
     <Grid Background="Aqua">
         <TextBlock
-            x:Name="textType"
-            Text="Hello"
+            x:Name="PosPrinterText"
+            Text="Printer"
+            MaxLines="5"
                    Foreground="Black"
-                   FontSize="100"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Top" Margin="0,40,0,0" />
-        <Button x:Name="button" Content="Click" RenderTransformOrigin="14.68,6.485" Margin="0,275,0,0" VerticalAlignment="Top" Height="129" Width="422" HorizontalAlignment="Center"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Margin="92,93,0,0" RenderTransformOrigin="0.295,5.128" Height="179" Width="1107" />
+        <TextBlock
+            x:Name="CashDrawerText"
+            Text="Cash"
+            MaxLines="5"
+                   Foreground="Black"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Margin="92,300,0,0" RenderTransformOrigin="0.511,-3.608" Height="124" Width="1109" />
+        <Button x:Name="button" Content="Click" RenderTransformOrigin="14.68,6.485" Margin="0,480,0,0" VerticalAlignment="Top" Height="129" Width="422" HorizontalAlignment="Center"
                 FontSize="50"
                 Background="Brown"
                 BorderBrush="Azure" Click="button_Click"
