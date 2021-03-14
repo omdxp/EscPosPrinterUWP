@@ -7,6 +7,8 @@
 
 #include "MainPage.g.h"
 
+//using namespace Windows::Devices::PointOfService;
+
 namespace EscPosPrinterUWP
 {
 	/// <summary>
@@ -18,6 +20,8 @@ namespace EscPosPrinterUWP
 		MainPage();
 
 	private:
+		//PosPrinter^ printer;
+		//CashDrawer^ cashDrawer;
 		void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void Button_Click_1(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
